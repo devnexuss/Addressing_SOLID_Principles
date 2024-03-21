@@ -11,12 +11,12 @@ public class LSPMain {
         TransactionData withdrawalTransactionData = new TransactionData(200.0, 800.0, date, "132435678");
         TransactionData billPaymentTransactionData = new TransactionData(300.0, 1500.0, date, "123456789");
         TransactionData refundTransactionData = new TransactionData(500, 1000, date, "18537756");
-        
+
         // Process transactions using the appropriate TransactionProcessor class
-        TransactionProcessor depositProcessor = new DepositTransactionProcessor();
-        TransactionProcessor withdrawalProcessor = new WithdrawalTransactionProcessor();
-        TransactionProcessor billPaymentProcessor = new BillPaymentTransactionProcessor();
-        TransactionProcessor refundProcessor = new RefundTransactionProcessor();
+        DepositTransactionProcessor depositProcessor = new DepositTransactionProcessor();
+        WithdrawalTransactionProcessor withdrawalProcessor = new WithdrawalTransactionProcessor();
+        BillPaymentTransactionProcessor billPaymentProcessor = new BillPaymentTransactionProcessor();
+        RefundTransactionProcessor refundProcessor = new RefundTransactionProcessor();
 
         depositProcessor.processTransaction(depositTransactionData);
         withdrawalProcessor.processTransaction(withdrawalTransactionData);
