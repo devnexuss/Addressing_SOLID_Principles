@@ -18,7 +18,7 @@ public class Withdraw extends Transaction {
     // This method updates the balance by subtracting the withdrawal amount
     @Override
     public void withdrawal() {
-        setBalance(getBalance() + getAmount());
+        setBalance(getBalance() - getAmount());
     }
 
     @Override
